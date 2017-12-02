@@ -6,15 +6,6 @@
 
 cmake_minimum_required(VERSION 2.6)
 
-if(NOT PYTHON_EXECUTABLE)
-  if(NumPy_FIND_QUIETLY)
-    find_package(PythonInterp QUIET)
-  else()
-    find_package(PythonInterp)
-    set(__numpy_out 1)
-  endif()
-endif()
-
 if (PYTHON_EXECUTABLE)
   # Find out the include path
   execute_process(
